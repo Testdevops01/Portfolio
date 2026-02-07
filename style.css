@@ -1,73 +1,124 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Segoe UI', sans-serif;
   background: #0f172a;
   color: #e5e7eb;
-  text-align: center;
+  line-height: 1.6;
 }
 
+/* ---------- HERO ---------- */
 .hero {
-  padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 80px 10%;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 160px;
-  height: 160px;
+  width: 220px;
+  height: 220px;
   border-radius: 50%;
-  border: 4px solid #38bdf8;
   object-fit: cover;
+  border: 4px solid #38bdf8;
 }
 
-h1 {
-  margin-top: 20px;
-  font-size: 2.2rem;
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #38bdf8;
+  margin-bottom: 15px;
 }
 
 .skills {
-  margin-top: 10px;
-  font-size: 1rem;
   color: #cbd5f5;
-}
-
-.buttons {
-  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
 .buttons a {
-  text-decoration: none;
-  color: #0f172a;
+  display: inline-block;
+  margin-right: 15px;
+  padding: 12px 24px;
   background: #38bdf8;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
+  color: #020617;
+  text-decoration: none;
   font-weight: bold;
+  border-radius: 6px;
+  transition: transform 0.2s;
 }
 
+.buttons a:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------- SECTIONS ---------- */
 section {
-  padding: 40px 20px;
+  padding: 70px 10%;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-left: 5px solid #38bdf8;
+  padding-left: 15px;
+}
+
+/* ---------- PROJECTS ---------- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
 }
 
 .project {
   background: #1e293b;
-  margin: 15px auto;
-  padding: 20px;
-  max-width: 600px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+}
+
+.project p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
 }
 
 .project a {
+  display: inline-block;
+  margin-top: 15px;
   color: #38bdf8;
   text-decoration: none;
+  font-weight: bold;
 }
 
+/* ---------- FOOTER ---------- */
 footer {
-  padding: 20px;
+  text-align: center;
+  padding: 30px;
   background: #020617;
   font-size: 0.9rem;
+  color: #94a3b8;
 }
 
